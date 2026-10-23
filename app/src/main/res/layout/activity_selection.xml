@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectionActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="2dp">
+
+        <ImageButton
+            android:id="@+id/backBtnSA"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back_icon"
+            android:contentDescription="@string/back_btn"
+            android:backgroundTint="?colorOnPrimary"
+            app:tint="@color/radakireng"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            android:layout_margin="5dp"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchViewSA"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:queryHint="@string/search_song"
+            android:fillColor="?themeColor"
+            android:focusable="false"
+            app:iconifiedByDefault="false"
+            android:background="@drawable/custom_search_view"
+            android:layout_margin="5dp"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            app:closeIcon="@null"/>
+
+        <ImageButton
+            android:id="@+id/voiceSearchBtnSA"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_search_view"
+            android:contentDescription="Voice Search"
+            android:src="@drawable/mic_icon"
+            app:tint="?attr/colorControlNormal" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/selectionRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scrollbarThumbVertical="@drawable/scroll_bar_icon"
+        android:scrollbars="vertical"
+        android:paddingBottom="50dp"
+        android:layout_marginTop="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

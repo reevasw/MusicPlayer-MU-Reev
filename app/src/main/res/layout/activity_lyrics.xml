@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/radakireng">
+
+    <ImageView
+        android:id="@+id/lyricsBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:scaleType="centerCrop"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lyricsRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="50dp"
+        android:clipToPadding="false"/>
+
+</RelativeLayout>

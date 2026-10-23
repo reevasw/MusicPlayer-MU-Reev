@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Permissions -->
+    <!-- Untuk Android 12 dan di bawah -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"
+        tools:ignore="ScopedStorage" /> <!-- Untuk Android 13+ -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" /> <!-- Untuk Android 14+ -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name=".ApplicationClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/music_player_icon"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/music_player_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.App.Starting"
+        tools:ignore="AllowBackup">
+        <activity android:name=".LyricsActivity" />
+        <activity
+            android:name=".DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ArtistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlbumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PlayNext"
+            android:exported="false" />
+        <activity
+            android:name=".AboutActivity"
+            android:configChanges="uiMode|orientation"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:configChanges="uiMode|orientation"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
+        <activity
+            android:name=".StatsActivity"
+            android:configChanges="uiMode|orientation"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
+        <activity
+            android:name=".SelectionActivity"
+            android:configChanges="uiMode|orientation"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
+        <activity
+            android:name=".PlaylistDetails"
+            android:configChanges="uiMode|orientation"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
+        <activity
+            android:name=".PlaylistActivity"
+            android:configChanges="uiMode|orientation"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
+        <activity
+            android:name=".FavouriteActivity"
+            android:configChanges="uiMode|orientation"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
+        <activity android:name=".MostPlayedActivity" />
+        <activity
+            android:name=".PlayerActivity"
+            android:configChanges="uiMode|orientation"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:mimeType="audio/*"
+                    android:scheme="content" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UserActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="uiMode|orientation"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
+        <service
+            android:name=".MusicService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
+        <receiver
+            android:name=".NotificationReceiver"
+            android:enabled="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

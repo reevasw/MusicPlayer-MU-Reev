@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="curved">
+        <item name="cornerSize">8%</item>
+    </style>
+    <style name="CircleShape">
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

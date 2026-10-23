@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="10dp"
+    android:layout_marginBottom="5dp"
+    app:cardBackgroundColor="?attr/colorSurface"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageMV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/music_player_icon"
+            app:shapeAppearanceOverlay="@style/curved"
+            android:layout_marginStart="7dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/songNameMV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/song_name"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/imageMV"
+            app:layout_constraintStart_toEndOf="@id/imageMV"
+            app:layout_constraintEnd_toStartOf="@id/songDuration"
+            app:layout_constraintBottom_toTopOf="@id/songArtisMV"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+        <TextView
+            android:id="@+id/songArtisMV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/artis_name"
+            android:textColor="?android:attr/textColorSecondary"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/songNameMV"
+            app:layout_constraintStart_toStartOf="@id/songNameMV"
+            app:layout_constraintEnd_toEndOf="@id/songNameMV"
+            app:layout_constraintBottom_toBottomOf="@id/imageMV"/>
+
+        <TextView
+            android:id="@+id/songDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_tv"
+            android:gravity="center"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/dragHandle"/>
+
+        <ImageView
+            android:id="@+id/dragHandle"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/drag_indicator_icon"
+            android:padding="4dp"
+            android:visibility="gone"
+            app:tint="?attr/themeColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:visibility="visible"
+            android:contentDescription="Drag to reorder" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

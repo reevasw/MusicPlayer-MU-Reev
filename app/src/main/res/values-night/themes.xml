@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Dark application theme. -->
+    <style name="Theme.MUReev" parent="Theme.Material3.Dark">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/dark_accent_primary</item>
+        <item name="colorPrimaryVariant">@color/dark_accent_light</item>
+        <item name="colorOnPrimary">@color/dark_text_primary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/dark_accent_light</item>
+        <item name="colorSecondaryVariant">@color/dark_bg_elevated</item>
+        <item name="colorOnSecondary">@color/dark_text_primary</item>
+        <!-- Surface & Background. -->
+        <item name="colorSurface">@color/dark_bg_surface</item>
+        <item name="colorOnSurface">@color/dark_text_primary</item>
+        <item name="colorOnBackground">@color/dark_text_primary</item>
+        <!-- Status bar. -->
+        <item name="android:statusBarColor">@color/black</item>
+        <!-- Text. -->
+        <item name="android:textColorPrimary">@color/dark_text_primary</item>
+        <item name="android:textColorSecondary">@color/dark_text_secondary</item>
+    </style>
+</resources>

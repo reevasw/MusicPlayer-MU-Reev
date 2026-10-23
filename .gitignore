@@ -1,0 +1,33 @@
+# Gradle files
+.gradle/
+build/
+/*/build/
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Android Studio files
+captures/
+.externalNativeBuild/
+.cxx/
+*.swp
+*~
+.DS_Store
+
+# Local configuration files
+local.properties
+
+# Signing files
+*.jks
+*.keystore
+*.pk8
+*.pem
+
+# Google Services (Firebase)
+google-services.json
+
+# Log files
+*.log

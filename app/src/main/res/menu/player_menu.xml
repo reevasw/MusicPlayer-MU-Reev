@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/metaData"
+        android:icon="@drawable/about_icon"
+        android:background="?attr/selectableItemBackground"
+        android:title="Meta data" />
+    <item
+        android:id="@+id/goArtist"
+        android:icon="@drawable/artist_icon"
+        android:background="?attr/selectableItemBackground"
+        android:title="Go to artist" />
+    <item
+        android:id="@+id/goAlbum"
+        android:icon="@drawable/album_icon"
+        android:background="?attr/selectableItemBackground"
+        android:title="Show album" />
+</menu>

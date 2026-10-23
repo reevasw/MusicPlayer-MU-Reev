@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerActivity">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/backBtnPA"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/back_btn"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/moreBtnPA"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="More options"
+        android:src="@drawable/more_options_icon"
+        android:stateListAnimator="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <!-- Current Song Image  -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/songImgPA"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:src="@drawable/music_player_icon_background"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backBtnPA"
+        app:layout_constraintBottom_toTopOf="@id/volumeBtnPA"
+        app:shapeAppearanceOverlay="@style/curved"
+        app:strokeColor="#00000000"
+        app:strokeWidth="5dp" />
+
+    <!-- Action Buttons Row (Volume, Favourite, Lyric, Speed, More) -->
+    <ImageButton
+        android:id="@+id/volumeBtnPA"
+        android:layout_width="48dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/volume_btn"
+        android:src="@drawable/volume_icon"
+        android:stateListAnimator="@null"
+        app:layout_constraintEnd_toStartOf="@+id/favouriteBtnPA"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/songNamePA"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/favouriteBtnPA"
+        android:layout_width="48dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="5dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/favourites_btn"
+        android:src="@drawable/favourite_empty_icon"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/volumeBtnPA"
+        app:layout_constraintEnd_toStartOf="@+id/lyricBtnPA"
+        app:layout_constraintStart_toEndOf="@+id/volumeBtnPA"
+        app:layout_constraintTop_toTopOf="@+id/volumeBtnPA"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/lyricBtnPA"
+        android:layout_width="48dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="5dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/lyric_btn"
+        android:src="@drawable/lyrics_icon"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/volumeBtnPA"
+        app:layout_constraintEnd_toStartOf="@+id/speedBtnPA"
+        app:layout_constraintStart_toEndOf="@+id/favouriteBtnPA"
+        app:layout_constraintTop_toTopOf="@+id/volumeBtnPA"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/speedBtnPA"
+        android:layout_width="48dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="5dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/speed_btn"
+        android:src="@drawable/speed_icon"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/volumeBtnPA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lyricBtnPA"
+        app:layout_constraintTop_toTopOf="@+id/volumeBtnPA"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="@color/white" />
+
+    <!-- Current Song Information -->
+
+
+
+    <TextView
+        android:id="@+id/songNamePA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="@string/song_name"
+        android:textColor="@color/white"
+        android:textIsSelectable="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/songAlbumPA" />
+
+    <TextView
+        android:id="@+id/songAlbumPA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="@string/album_name"
+        android:textColor="@color/white"
+        android:textIsSelectable="true"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/songArtisPA" />
+
+    <TextView
+        android:id="@+id/songArtisPA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="15dp"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="@string/artis_name"
+        android:textColor="@color/white"
+        android:textIsSelectable="true"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/seekBarPA" />
+
+    <!-- SeekBar -->
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekBarPA"
+        android:layout_width="367dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        app:iconTint="@color/set_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvSeekBarStart" />
+
+    <!-- SeekBar Start Time -->
+    <TextView
+        android:id="@+id/tvSeekBarStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/start_tv"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/seekBarPA"
+        app:layout_constraintBottom_toTopOf="@id/repeatBtnPA" />
+
+    <!-- SeekBar End Time -->
+    <TextView
+        android:id="@+id/tvSeekBarEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="@string/end_tv"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/seekBarPA"
+        app:layout_constraintTop_toTopOf="@id/tvSeekBarStart" />
+
+    <!-- Playback Controls (Repeat, Prev, Play, Next, Shuffle) -->
+    <!-- DIKATKAN KE BAWAH (Ke Audio Info TV) -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/repeatBtnPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/repeat_btn"
+        android:stateListAnimator="@null"
+        app:elevation="0dp"
+        app:icon="@drawable/repeat_icon"
+        app:iconSize="45dp"
+        app:iconTint="@color/set_white"
+        app:layout_constraintEnd_toStartOf="@+id/previousBtnPA"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/audioInfoTV" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/previousBtnPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/previous_btn"
+        android:stateListAnimator="@null"
+        app:elevation="0dp"
+        app:icon="@drawable/skip_previous_icon"
+        app:iconSize="40dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/repeatBtnPA"
+        app:layout_constraintEnd_toStartOf="@+id/playPauseBtnPA"
+        app:layout_constraintStart_toEndOf="@+id/repeatBtnPA"
+        app:layout_constraintTop_toTopOf="@+id/repeatBtnPA" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/playPauseBtnPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/play_pause"
+        android:stateListAnimator="@null"
+        app:elevation="0dp"
+        app:icon="@drawable/pause_icon"
+        app:iconSize="50dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/repeatBtnPA"
+        app:layout_constraintEnd_toStartOf="@+id/nextBtnPA"
+        app:layout_constraintStart_toEndOf="@+id/previousBtnPA"
+        app:layout_constraintTop_toTopOf="@+id/repeatBtnPA" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/nextBtnPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/next_btn"
+        android:stateListAnimator="@null"
+        app:elevation="0dp"
+        app:icon="@drawable/skip_next_icon"
+        app:iconSize="40dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/repeatBtnPA"
+        app:layout_constraintEnd_toStartOf="@+id/shuffleBtnPA"
+        app:layout_constraintStart_toEndOf="@+id/playPauseBtnPA"
+        app:layout_constraintTop_toTopOf="@+id/repeatBtnPA" />
+
+
+    <!-- Audio Info -->
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/shuffleBtnPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/shuffle_btn"
+        android:stateListAnimator="@null"
+        app:elevation="0dp"
+        app:icon="@drawable/shuffle_icon"
+        app:iconSize="45dp"
+        app:iconTint="@color/set_white"
+        app:layout_constraintBottom_toBottomOf="@+id/repeatBtnPA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nextBtnPA"
+        app:layout_constraintTop_toTopOf="@+id/repeatBtnPA"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/audioInfoTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBarBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="FLAC: 44.1kHz 16bit 1412Kbps" />
+
+    <!-- Bottom Bar Background -->
+    <View
+        android:id="@+id/bottomBarBackground"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/gradient_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Menggunakan Horizontal Chain (Spread) agar tombol terbagi rata -->
+    <ImageButton
+        android:id="@+id/homeBtnPA"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/home_btn"
+        android:src="@drawable/home_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/equalizerBtnPA"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/equalizerBtnPA"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/equalizer_btn"
+        android:src="@drawable/equalizer_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/timerBtnPA"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/homeBtnPA"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/timerBtnPA"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/timer_btn"
+        android:src="@drawable/timer_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shareBtnPA"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/equalizerBtnPA"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/shareBtnPA"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/share_btn"
+        android:src="@drawable/share_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/queueBtnPA"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/timerBtnPA"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/queueBtnPA"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/queue_btn"
+        android:src="@drawable/queue_music_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/shareBtnPA"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

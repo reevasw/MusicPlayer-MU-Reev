@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/favouriteHoldBtn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:icon="@drawable/favourite_icon"
+        app:iconGravity="top"
+        android:background="?attr/selectableItemBackground"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textColor="@color/white"
+        android:text="@string/hold_favourite"
+        app:iconTint="@color/white"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/infoBtn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:icon="@drawable/about_icon"
+        app:iconGravity="top"
+        android:background="?attr/selectableItemBackground"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textColor="@color/white"
+        android:text="@string/info"
+        app:iconTint="@color/white"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/playNextBtn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:icon="@drawable/play_next_icon"
+        app:iconGravity="top"
+        android:background="?attr/selectableItemBackground"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textColor="@color/white"
+        android:text="@string/play_next"
+        app:iconTint="@color/white"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addToQueueBtn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:icon="@drawable/queue_music_icon"
+        app:iconGravity="top"
+        android:background="?attr/selectableItemBackground"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textColor="@color/white"
+        android:text="@string/queue"
+        app:iconTint="@color/white"/>
+
+</LinearLayout>

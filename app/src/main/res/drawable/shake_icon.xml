@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorControlNormal">
+
+    <!-- Body Smartphone -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M16.5,3h-9C6.67,3 6,3.67 6,4.5v15c0,0.83 0.67,1.5 1.5,1.5h9c0.83,0 1.5,-0.67 1.5,-1.5v-15c0,-0.83 -0.67,-1.5 -1.5,-1.5zM16,19L8,19L8,5h8v14z" />
+
+    <!-- Garis Guncangan Kiri -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M1.38,6.48l1.73,1l-0.5,0.87l-1.73,-1zM0,11h2v1h-2zM0.88,15.65l1.73,-1l0.5,0.87l-1.73,1z" />
+
+    <!-- Garis Guncangan Kanan -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M20.89,7.48l1.73,-1l0.5,0.87l-1.73,1zM22,11h2v1h-2zM21.39,15.52l1.73,1l-0.5,0.87l-1.73,-1z" />
+
+</vector>

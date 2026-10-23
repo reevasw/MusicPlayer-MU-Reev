@@ -1,0 +1,109 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema Splash Screen -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/music_player_icon_slash_screen</item>
+        <!-- PENTING: Tema setelah splash harus turunan MaterialComponents -->
+        <item name="postSplashScreenTheme">@style/DarkTheme</item>
+    </style>
+
+    <style name="TransparentBottomSheetDialogTheme" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/TransparentBottomSheet</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="TransparentDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <attr name="themeColor" format="color"/>
+    <attr name="dialogTextColor" format="color"/>
+    <attr name="dialogBtnBackground" format="color"/>
+
+    <!-- ============================================ -->
+    <!--           LIGHT THEME — Activity             -->
+    <!-- ============================================ -->
+
+    <style name="LightTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="themeColor">@color/cool_blue</item>
+        <item name="colorPrimary">@color/cool_blue</item>
+        <item name="colorPrimaryVariant">@color/light_accent_mid</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/light_accent_mid</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSurface">@color/light_bg_surface</item>
+        <item name="colorOnSurface">@color/light_text_primary</item> <!-- #111111 -->
+        <item name="android:colorBackground">@color/light_bg_primary</item>
+        <item name="android:textColorPrimary">@color/light_text_primary</item> <!-- #111111 -->
+        <item name="android:textColorSecondary">@color/light_text_secondary</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/cool_blue</item>
+        <item name="dialogBtnBackground">@color/cool_blue</item>
+        <item name="dialogTextColor">@color/white</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <!-- ============================================ -->
+    <!--       LIGHT THEME — Navigation Drawer        -->
+    <!-- ============================================ -->
+
+    <style name="LightThemeNav" parent="Theme.MaterialComponents.Light">
+        <item name="themeColor">@color/cool_blue</item>
+        <item name="colorPrimary">@color/light_bg_surface</item>
+        <item name="colorOnPrimary">@color/light_text_primary</item>
+        <item name="colorSecondary">@color/cool_blue</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSurface">@color/light_bg_surface</item>
+        <item name="colorOnSurface">@color/light_text_primary</item> <!-- #111111 -->
+        <item name="android:colorBackground">@color/light_bg_primary</item>
+        <item name="android:textColorPrimary">@color/light_text_primary</item> <!-- #111111 -->
+        <item name="android:textColorSecondary">@color/light_text_secondary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/cool_blue</item>
+        <item name="dialogBtnBackground">@color/cool_blue</item>
+        <item name="dialogTextColor">@color/white</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <!-- ============================================ -->
+    <!--           DARK THEME — Activity              -->
+    <!-- ============================================ -->
+
+    <style name="DarkTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="themeColor">@color/dark_accent_primary</item>
+        <item name="colorPrimary">@color/dark_accent_primary</item>
+        <item name="colorPrimaryVariant">@color/dark_bg_elevated</item>
+        <item name="colorOnPrimary">@color/dark_text_primary</item>
+        <item name="colorSecondary">@color/dark_accent_light</item>
+        <item name="colorOnSecondary">@color/dark_text_primary</item>
+        <item name="colorSurface">@color/dark_bg_surface</item>
+        <item name="colorOnSurface">@color/dark_text_primary</item> <!-- Putih -->
+        <item name="android:colorBackground">@color/dark_bg_primary</item>
+        <item name="android:textColorPrimary">@color/dark_text_primary</item>
+        <item name="android:textColorSecondary">@color/dark_text_secondary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+        <item name="dialogBtnBackground">@color/dark_bg_elevated</item>
+        <item name="dialogTextColor">@color/dark_text_primary</item>
+    </style>
+
+    <!-- ============================================ -->
+    <!--        DARK THEME — Navigation Drawer        -->
+    <!-- ============================================ -->
+
+    <style name="DarkThemeNav" parent="Theme.MaterialComponents">
+        <item name="themeColor">@color/dark_accent_primary</item>
+        <item name="colorPrimary">@color/dark_bg_surface</item>
+        <item name="colorOnPrimary">@color/dark_text_primary</item>
+        <item name="colorSecondary">@color/dark_accent_primary</item>
+        <item name="colorOnSecondary">@color/dark_text_primary</item>
+        <item name="colorSurface">@color/dark_bg_surface</item>
+        <item name="colorOnSurface">@color/dark_text_primary</item> <!-- Putih -->
+        <item name="android:colorBackground">@color/dark_bg_primary</item>
+        <item name="android:textColorPrimary">@color/dark_text_primary</item>
+        <item name="android:textColorSecondary">@color/dark_text_secondary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+        <item name="dialogBtnBackground">@color/dark_bg_elevated</item>
+        <item name="dialogTextColor">@color/dark_text_primary</item>
+    </style>
+
+</resources>

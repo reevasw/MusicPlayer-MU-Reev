@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Gunakan warna tema utama aplikasi Anda -->
+    <solid android:color="?attr/themeColor" />
+
+    <!-- Buat sudutnya sangat melengkung agar terlihat seperti kapsul -->
+    <corners android:radius="20dp" />
+
+    <!-- Atur ukuran default (opsional, bisa diatur dari RecyclerView) -->
+    <size android:width="6dp" />
+
+</shape>
